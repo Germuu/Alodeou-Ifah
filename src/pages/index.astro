@@ -70,7 +70,7 @@ const venues = [
         
         <div class="mt-16 flex flex-col md:flex-row md:items-end justify-between gap-12">
           <p class="max-w-lg text-xl font-normal leading-relaxed text-zinc-500 md:text-2xl">
-            Born from brotherhood. <span class="text-brand-text">A tribal yet futuristic ritual where angelic harmonies and hypnotic melodies collide.</span>
+            Born from brotherhood. <span class="text-brand-text">An ancestral yet futuristic ritual where angelic harmonies and hypnotic melodies collide.</span>
           </p>
           
           <div class="flex -space-x-6">
@@ -81,24 +81,49 @@ const venues = [
         </div>
       </section>
 
-      <section class="py-24 border-t border-zinc-100">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-          <h2 class="text-xs font-black tracking-[0.3em] uppercase text-zinc-400">The Philosophy</h2>
-          <div class="space-y-8">
-            <p class="text-3xl md:text-5xl font-light leading-tight italic tracking-tight">
-              "We are the bridge between the red dust of Cotonou and the midnight sun of Helsinki."
-            </p>
-            <p class="text-zinc-500 leading-relaxed max-w-lg text-lg">
-              Alodeou & Ifáh is more than a duo; it is a sonic investigation of lineage. By reclaiming ancestral polyphonies and stripping them through the filter of modern industrial rap, we create a space where the ritual is not a memory, but a future frequency.
-            </p>
-          </div>
-        </div>
-      </section>
+		<section class="py-32 border-t border-white/5">
+		<div class="max-w-6xl">
+			<h2 class="text-xs font-black tracking-[0.5em] uppercase clay-text mb-16">Who are we?</h2>
+			
+			<div class="mb-20">
+				<p class="text-4xl md:text-7xl font-light leading-[1.05] tracking-tighter mb-8">
+				Bilingual frequencies in <span class="italic">French</span> and <span class="clay-text">English</span>.
+				</p>
+
+			</div>
+
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
+				<div class="space-y-6">
+				<p class="text-zinc-500 text-lg leading-relaxed">
+					Alodeou & Ifáh is a sonic investigation and celebration of displacement. Born in the Boreal North and tempered in the concrete crossroads of Brussels, our sound is partly the result of the heritage our parents brought with them—cooked, seasoned, and transformed.
+				</p>
+				<p class="text-zinc-500 text-lg leading-relaxed">
+					By reclaiming Fon and Finnish sounds and stripping them through industrial rap and organic instrumentation, we create a space where the ritual is no longer a memory.
+				</p>
+				</div>
+
+				<div class="border-l border-white/10 pl-8 space-y-8">
+					<div>
+						<h4 class="text-[10px] font-black uppercase tracking-[0.3em] clay-text mb-4">Themes of the Ritual</h4>
+						<ul class="text-xl font-light space-y-2 opacity-80">
+							<li>Mythology & Spirits</li>
+							<li>Ancestral Wisdom</li>
+							<li>Historical Trauma</li>
+							<li>Radical Optimism</li>
+						</ul>
+					</div>
+					<p class="text-sm text-zinc-600 italic leading-relaxed">
+						"We don't just perform; we use the density of the past to color the emptiness of the machine."
+					</p>
+				</div>
+			</div>
+		</div>
+		</section>
 
       <div class="py-12 border-y border-zinc-100 mb-24 ticker-wrap select-none">
         <div class="ticker-content text-[8vw] font-black uppercase tracking-tighter opacity-10">
-          <span>Sahelian Frequencies // New Rituals Loading // Future Ancestors // </span>
-          <span>Sahelian Frequencies // New Rituals Loading // Future Ancestors // </span>
+          <span>Sahelian Frequencies // New Performances Loading // Future Ancestors // </span>
+          <span>Sahelian Frequencies // New Performances Loading // Future Ancestors // </span>
         </div>
       </div>
 
@@ -135,7 +160,7 @@ const venues = [
       </section>
 
       <section id="rituals" class="py-24 border-t border-zinc-100">
-        <h2 class="text-xs font-bold tracking-[0.3em] uppercase mb-12">Manifested Rituals</h2>
+        <h2 class="text-xs font-bold tracking-[0.3em] uppercase mb-12"> shows we've done</h2>
         <div class="space-y-1">
           {venues.map((venue) => (
             <div class="group flex justify-between items-center py-8 border-b border-zinc-100 hover:px-4 transition-all duration-500 cursor-default">
