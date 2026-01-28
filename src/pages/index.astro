@@ -39,10 +39,64 @@ const venues = [
         animation: ticker 30s linear infinite;
         gap: 4rem;
       }
+
+      /* CONTACT PANEL STYLES */
+      .clay-text { color: #b7410e; }
+      
+      #contact-panel {
+        transform: translateX(100%);
+        transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+      }
+      #contact-panel.open {
+        transform: translateX(0);
+      }
+      .panel-overlay {
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.6s ease;
+      }
+      .panel-overlay.open {
+        opacity: 1;
+        pointer-events: auto;
+      }
     </style>
   </head>
 
   <body class="bg-brand-bg text-brand-text">
+    
+    <div id="panel-overlay" class="panel-overlay fixed inset-0 bg-black/40 z-[100] backdrop-blur-sm"></div>
+
+    <div id="contact-panel" class="fixed top-0 right-0 h-full w-full md:w-[450px] bg-white z-[101] shadow-2xl p-12 flex flex-col justify-between border-l border-zinc-100">
+      <div>
+        <button id="close-contact" class="text-[10px] font-black uppercase tracking-[0.4em] opacity-30 hover:opacity-100 mb-24 transition-opacity">
+          [ Close ]
+        </button>
+        
+        <h2 class="text-xs font-black tracking-[0.5em] uppercase clay-text mb-8">Contact</h2>
+        
+        <div class="space-y-12">
+          <div>
+            <span class="text-[10px] uppercase tracking-widest opacity-30 block mb-2">Email</span>
+            <a href="mailto:jeremyyamajako@gmail.com" class="text-2xl md:text-3xl font-light hover:clay-text transition-colors">Jeremyyamajako@gmail.com</a>
+          </div>
+          
+          <div>
+            <span class="text-[10px] uppercase tracking-widest opacity-30 block mb-2">Phone</span>
+            <a href="tel:+358413109733" class="text-2xl md:text-3xl font-light hover:clay-text transition-colors">+358 41 310 9733</a>
+          </div>
+
+          <div>
+            <span class="text-[10px] uppercase tracking-widest opacity-30 block mb-2">Instagram</span>
+            <a href="https://instagram.com/ifadeou" target="_blank" class="text-2xl md:text-3xl font-light hover:clay-text transition-colors">@ifadeou</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-[10px] uppercase tracking-[0.4em] opacity-20">
+        Helsinki — Brussels — Cotonou
+      </div>
+    </div>
+
     <main class="mx-auto max-w-[1400px] px-6 overflow-x-hidden">
       
       <div class="flex justify-center pt-12 pb-4">
@@ -58,7 +112,7 @@ const venues = [
         <div class="space-x-8">
           <a href="#music" class="hover:opacity-40 transition-opacity">Music</a>
           <a href="#rituals" class="hover:opacity-40 transition-opacity">Live</a>
-          <a href="mailto:contact@ifadeou.fi" class="hover:opacity-40 transition-opacity">Booking</a>
+          <button id="open-contact" class="hover:opacity-40 transition-opacity uppercase font-bold">Contact</button>
         </div>
       </nav>
 
@@ -81,44 +135,43 @@ const venues = [
         </div>
       </section>
 
-		<section class="py-32 border-t border-white/5">
-		<div class="max-w-6xl">
-			<h2 class="text-xs font-black tracking-[0.5em] uppercase clay-text mb-16">Who are we?</h2>
-			
-			<div class="mb-20">
-				<p class="text-4xl md:text-7xl font-light leading-[1.05] tracking-tighter mb-8">
-				Bilingual frequencies in <span class="italic">French</span> and <span class="clay-text">English</span>.
-				</p>
+      <section class="py-32 border-t border-white/5">
+        <div class="max-w-6xl">
+            <h2 class="text-xs font-black tracking-[0.5em] uppercase clay-text mb-16">Who are we?</h2>
+            
+            <div class="mb-20">
+                <p class="text-4xl md:text-7xl font-light leading-[1.05] tracking-tighter mb-8">
+                Bilingual frequencies in <span class="italic">French</span> and <span>English</span>.
+                </p>
+            </div>
 
-			</div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
+                <div class="space-y-6">
+                <p class="text-zinc-500 text-lg leading-relaxed">
+                    Alodeou & Ifáh is a sonic investigation and celebration of displacement. Born in the Boreal North and tempered in the concrete crossroads of Brussels, our sound is partly the result of the heritage our parents brought with them—cooked, seasoned, and transformed.
+                </p>
+                <p class="text-zinc-500 text-lg leading-relaxed">
+                    By reclaiming Fon and Finnish sounds and stripping them through industrial rap and organic instrumentation, we create a space where the ritual is no longer a memory.
+                </p>
+                </div>
 
-			<div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
-				<div class="space-y-6">
-				<p class="text-zinc-500 text-lg leading-relaxed">
-					Alodeou & Ifáh is a sonic investigation and celebration of displacement. Born in the Boreal North and tempered in the concrete crossroads of Brussels, our sound is partly the result of the heritage our parents brought with them—cooked, seasoned, and transformed.
-				</p>
-				<p class="text-zinc-500 text-lg leading-relaxed">
-					By reclaiming Fon and Finnish sounds and stripping them through industrial rap and organic instrumentation, we create a space where the ritual is no longer a memory.
-				</p>
-				</div>
-
-				<div class="border-l border-white/10 pl-8 space-y-8">
-					<div>
-						<h4 class="text-[10px] font-black uppercase tracking-[0.3em] clay-text mb-4">Themes of the Ritual</h4>
-						<ul class="text-xl font-light space-y-2 opacity-80">
-							<li>Mythology & Spirits</li>
-							<li>Ancestral Wisdom</li>
-							<li>Historical Trauma</li>
-							<li>Radical Optimism</li>
-						</ul>
-					</div>
-					<p class="text-sm text-zinc-600 italic leading-relaxed">
-						"We don't just perform; we use the density of the past to color the emptiness of the machine."
-					</p>
-				</div>
-			</div>
-		</div>
-		</section>
+                <div class="border-l border-white/10 pl-8 space-y-8">
+                    <div>
+                        <h4 class="text-[10px] font-black uppercase tracking-[0.3em] clay-text mb-4">Themes of the Ritual</h4>
+                        <ul class="text-xl font-light space-y-2 opacity-80">
+                            <li>Mythology & Spirits</li>
+                            <li>Ancestral Wisdom</li>
+                            <li>Historical Trauma</li>
+                            <li>Radical Optimism</li>
+                        </ul>
+                    </div>
+                    <p class="text-sm text-zinc-600 italic leading-relaxed">
+                        "We don't just perform; we use the density of the past to color the emptiness of the machine."
+                    </p>
+                </div>
+            </div>
+        </div>
+      </section>
 
       <div class="py-12 border-y border-zinc-100 mb-24 ticker-wrap select-none">
         <div class="ticker-content text-[8vw] font-black uppercase tracking-tighter opacity-10">
@@ -182,8 +235,6 @@ const venues = [
         </div>
       </section>
 
-    
-
       <footer class="py-16 border-t border-zinc-100 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] uppercase tracking-[0.3em] text-zinc-400">
         <span>© 2026 {duoName} & {duoSecondPart}</span>
         <div class="flex gap-8">
@@ -197,6 +248,21 @@ const venues = [
 
     <script>
       document.addEventListener('DOMContentLoaded', () => {
+        const panel = document.getElementById('contact-panel');
+        const overlay = document.getElementById('panel-overlay');
+        const openBtn = document.getElementById('open-contact');
+        const closeBtn = document.getElementById('close-contact');
+
+        const togglePanel = () => {
+          panel.classList.toggle('open');
+          overlay.classList.toggle('open');
+          document.body.style.overflow = panel.classList.contains('open') ? 'hidden' : '';
+        };
+
+        openBtn.addEventListener('click', togglePanel);
+        closeBtn.addEventListener('click', togglePanel);
+        overlay.addEventListener('click', togglePanel);
+
         const revealObserver = new IntersectionObserver((entries) => {
           entries.forEach(entry => {
             if (entry.isIntersecting) {
