@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+/* This is where you add your 'Ritual' custom CSS later */
+:root {
+  --color-ritual-purple: #4c1d95;
+}
+
+body {
+  @apply bg-black text-white antialiased;
+  font-feature-settings: "ss01", "ss02", "cv01";
+}
