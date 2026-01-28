@@ -40,7 +40,6 @@ const venues = [
         gap: 4rem;
       }
 
-      /* CONTACT PANEL STYLES */
       .clay-text { color: #b7410e; }
       
       #contact-panel {
@@ -77,21 +76,18 @@ const venues = [
         <div class="space-y-12">
           <div>
             <span class="text-[10px] uppercase tracking-widest opacity-30 block mb-2">Email</span>
-            <a href="mailto:jeremyyamajako@gmail.com" class="text-2xl md:text-3xl font-light hover:clay-text transition-colors">Jeremyyamajako@gmail.com</a>
+            <a href="mailto:Jeremyyamajako@gmail.com" class="text-2xl md:text-3xl font-light hover:clay-text transition-colors">Jeremyyamajako@gmail.com</a>
           </div>
-          
           <div>
             <span class="text-[10px] uppercase tracking-widest opacity-30 block mb-2">Phone</span>
             <a href="tel:+358413109733" class="text-2xl md:text-3xl font-light hover:clay-text transition-colors">+358 41 310 9733</a>
           </div>
-
           <div>
             <span class="text-[10px] uppercase tracking-widest opacity-30 block mb-2">Instagram</span>
             <a href="https://instagram.com/ifadeou" target="_blank" class="text-2xl md:text-3xl font-light hover:clay-text transition-colors">@ifadeou</a>
           </div>
         </div>
       </div>
-
       <div class="text-[10px] uppercase tracking-[0.4em] opacity-20">
         Helsinki — Brussels — Cotonou
       </div>
@@ -100,23 +96,19 @@ const venues = [
     <main class="mx-auto max-w-[1400px] px-6 overflow-x-hidden">
       
       <div class="flex justify-center pt-12 pb-4">
-        <img 
-          src="/images/LOGO, BACK.png" 
-          alt="Alodeou Ifáh Logo" 
-          class="w-16 h-16 md:w-20 md:h-20 object-contain" 
-        />
+        <img src="/images/LOGO, BACK.png" alt="Logo" class="w-16 h-16 md:w-20 md:h-20 object-contain" />
       </div>
 
       <nav class="flex justify-between py-10 text-xs font-bold tracking-[0.2em] uppercase">
         <span>{duoName} & {duoSecondPart}</span>
         <div class="space-x-8">
-          <a href="#music" class="hover:opacity-40 transition-opacity">Music</a>
-          <a href="#rituals" class="hover:opacity-40 transition-opacity">Live</a>
-          <button id="open-contact" class="hover:opacity-40 transition-opacity uppercase font-bold">Contact</button>
+          <a href="#music" class="hover:opacity-40">Music</a>
+          <a href="#rituals" class="hover:opacity-40">Live</a>
+          <button id="open-contact" class="hover:opacity-40 uppercase font-bold">Contact</button>
         </div>
       </nav>
 
-      <section class="min-h-[70vh] flex flex-col justify-center py-20 md:py-32">
+      <section class="min-h-[90vh] flex flex-col justify-center py-20 md:py-32">
         <h1 class="text-[13vw] font-medium leading-[0.85] tracking-tighter md:text-[11vw] uppercase">
           {duoName} <br/> 
           {duoSecondPart}
@@ -126,36 +118,45 @@ const venues = [
           <p class="max-w-lg text-xl font-normal leading-relaxed text-zinc-500 md:text-2xl">
             Born from brotherhood. <span class="text-brand-text">An ancestral yet futuristic ritual where angelic harmonies and hypnotic melodies collide.</span>
           </p>
-          
           <div class="flex -space-x-6">
             <div class="h-24 w-24 rounded-full border-[6px] border-brand-bg bg-brand-sage transition-transform hover:scale-110 duration-500"></div>
             <div class="h-24 w-24 rounded-full border-[6px] border-brand-bg bg-brand-rose transition-transform hover:scale-110 duration-500"></div>
             <div class="h-24 w-24 rounded-full border-[6px] border-brand-bg bg-brand-cream transition-transform hover:scale-110 duration-500"></div>
           </div>
         </div>
+
+        <div class="mt-24 w-full max-w-4xl mx-auto overflow-hidden rounded-[2.5rem] bg-zinc-100 shadow-2xl">
+          <div class="aspect-video w-full">
+            <iframe 
+              class="w-full h-full"
+              src="https://www.youtube.com/embed/J14uDwfbkAQ" 
+              title="Alodeou Ifáh Ritual" 
+              frameborder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
       </section>
 
-      <section class="py-32 border-t border-white/5">
+      <section class="py-32 border-t border-zinc-100">
         <div class="max-w-6xl">
             <h2 class="text-xs font-black tracking-[0.5em] uppercase clay-text mb-16">Who are we?</h2>
-            
             <div class="mb-20">
                 <p class="text-4xl md:text-7xl font-light leading-[1.05] tracking-tighter mb-8">
                 Bilingual frequencies in <span class="italic">French</span> and <span>English</span>.
                 </p>
             </div>
-
             <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
                 <div class="space-y-6">
-                <p class="text-zinc-500 text-lg leading-relaxed">
-                    Alodeou & Ifáh is a sonic investigation and celebration of displacement. Born in the Boreal North and tempered in the concrete crossroads of Brussels, our sound is partly the result of the heritage our parents brought with them—cooked, seasoned, and transformed.
-                </p>
-                <p class="text-zinc-500 text-lg leading-relaxed">
-                    By reclaiming Fon and Finnish sounds and stripping them through industrial rap and organic instrumentation, we create a space where the ritual is no longer a memory.
-                </p>
+                  <p class="text-zinc-500 text-lg leading-relaxed">
+                      Alodeou & Ifáh is a sonic investigation and celebration of displacement. Born in the Boreal North and tempered in the concrete crossroads of Brussels, our sound is partly the result of the heritage our parents brought with them—cooked, seasoned, and transformed.
+                  </p>
+                  <p class="text-zinc-500 text-lg leading-relaxed">
+                      By reclaiming Fon and Finnish sounds and stripping them through industrial rap and organic instrumentation, we create a space where the ritual is no longer a memory.
+                  </p>
                 </div>
-
-                <div class="border-l border-white/10 pl-8 space-y-8">
+                <div class="border-l border-zinc-100 pl-8 space-y-8">
                     <div>
                         <h4 class="text-[10px] font-black uppercase tracking-[0.3em] clay-text mb-4">Themes of the Ritual</h4>
                         <ul class="text-xl font-light space-y-2 opacity-80">
@@ -183,26 +184,15 @@ const venues = [
       <section class="grid grid-cols-1 md:grid-cols-12 gap-6 pb-40" id="music">
         <div class="md:col-span-8 group relative overflow-hidden rounded-[2.5rem] bg-brand-sage p-1">
           <div class="aspect-video w-full overflow-hidden rounded-[2.3rem] bg-white">
-            <iframe 
-                class="w-full h-full"
-                src="https://www.youtube.com/embed/V3ZUmrRG7U0" 
-                title="Alodeou Ifáh - Futur ancien" 
-                frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                allowfullscreen>
-            </iframe>
+            <iframe class="w-full h-full" src="https://www.youtube.com/embed/V3ZUmrRG7U0" title="Alodeou Ifáh - Futur ancien" frameborder="0" allowfullscreen></iframe>
           </div>
         </div>
-        
         <div class="md:col-span-4 relative overflow-hidden rounded-[2.5rem] bg-brand-rose h-[500px] md:h-auto">
           <img src="/images/J&J-62.jpg" class="absolute inset-0 h-full w-full object-cover transition-opacity duration-1000 opacity-100 slideshow-img" alt="Slide 1"/>
           <img src="/images/paint-6.jpg" class="absolute inset-0 h-full w-full object-cover transition-opacity duration-1000 opacity-0 slideshow-img" alt="Slide 2"/>
           <div class="absolute inset-0 bg-black/10"></div>
-          <div class="absolute bottom-8 left-8 text-white uppercase text-[10px] font-black tracking-widest">
-            Hobo Hotel Album Release Event
-          </div>
+          <div class="absolute bottom-8 left-8 text-white uppercase text-[10px] font-black tracking-widest">Hobo Hotel Album Release Event</div>
         </div>
-
         <div class="md:col-span-12 rounded-[2.5rem] bg-brand-cream p-8 md:p-12">
             <div class="mb-8 flex flex-col md:flex-row justify-between items-baseline gap-2">
                 <h3 class="text-[10px] font-black uppercase tracking-[0.3em] text-brand-text">Our Debut Album</h3>
@@ -243,7 +233,6 @@ const venues = [
         </div>
         <span>Helsinki — Cotonou</span>
       </footer>
-
     </main>
 
     <script>
@@ -252,39 +241,31 @@ const venues = [
         const overlay = document.getElementById('panel-overlay');
         const openBtn = document.getElementById('open-contact');
         const closeBtn = document.getElementById('close-contact');
-
         const togglePanel = () => {
           panel.classList.toggle('open');
           overlay.classList.toggle('open');
           document.body.style.overflow = panel.classList.contains('open') ? 'hidden' : '';
         };
-
         openBtn.addEventListener('click', togglePanel);
         closeBtn.addEventListener('click', togglePanel);
         overlay.addEventListener('click', togglePanel);
 
         const revealObserver = new IntersectionObserver((entries) => {
           entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add('visible');
-            }
+            if (entry.isIntersecting) entry.target.classList.add('visible');
           });
         }, { threshold: 0.1 });
-
         document.querySelectorAll('.reveal-img').forEach(img => revealObserver.observe(img));
 
         const images = document.querySelectorAll('.slideshow-img');
         let currentIndex = 0;
-
         function cycleImages() {
           if (images.length < 2) return;
           images[currentIndex].classList.replace('opacity-100', 'opacity-0');
           currentIndex = (currentIndex + 1) % images.length;
           images[currentIndex].classList.replace('opacity-0', 'opacity-100');
         }
-
         setInterval(cycleImages, 4000);
-        window.scrollTo(0, 0);
       });
     </script>
   </body>
