@@ -1,0 +1,44 @@
+---
+// Define the props for our component
+interface Props {
+  src: string;
+  alt: string;
+  side?: 'left' | 'right';
+  rotate?: number; // e.g., -5 to 5
+}
+
+const { src, alt, side = 'left', rotate = 0 } = Astro.props;
+---
+
+<div class={`image-wrapper ${side}`} style={`--rotation: ${rotate}deg;`}>
+  <img src={src} alt={alt} class="reveal-img" />
+</div>
+
+<style>
+  .image-wrapper {
+    display: flex;
+    width: 100%;
+    margin: 4rem 0; /* Vertical spacing between images */
+  }
+
+  /* Align images to the left or right of the "wall" */
+  .left { justify-content: flex-start; padding-left: 10%; }
+  .right { justify-content: flex-right; justify-content: flex-end; padding-right: 10%; }
+
+  .reveal-img {
+    max-width: 400px;
+    height: auto;
+    border: 12px solid white; /* Polaroid/Gallery look */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    
+    /* Initial state for animation */
+    opacity: 0;
+    transform: translateY(40px) rotate(var(--rotation));
+    transition: all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1);
+  }
+
+  .reveal-img.visible {
+    opacity: 1;
+    transform: translateY(0) rotate(var(--rotation));
+  }
+</style>

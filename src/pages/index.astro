@@ -1,72 +1,200 @@
 ---
 import '../styles/global.css';
-const duoName = "IFADEOU";
+
+const duoName = "Alodeou";
+const duoSecondPart = "Ifáh";
+const venues = [
+  { name: "Siltanen", vibe: "Filled the room" },
+  { name: "Kallio Block Party", vibe: "Unmatched energy" },
+  { name: "Hobo Hotel", vibe: "Album Release Event" },
+  { name: "Kuudes Linja", vibe: "The ritual continued" },
+  { name: "The Spot Helsinki", vibe: "New ambience" },
+];
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
-		<title>{duoName} | Ancestral Rituals</title>
-	</head>
-	<body class="bg-black">
-		<main class="mx-auto max-w-5xl px-6 py-20">
-			
-			<section class="flex min-h-[70vh] flex-col items-center justify-center text-center">
-				<div class="mb-6 h-1 w-12 bg-purple-600 animate-glow"></div>
-				<h1 class="text-7xl font-black tracking-tighter md:text-9xl uppercase italic">
-					{duoName}
-				</h1>
-				<p class="mt-6 max-w-xl text-lg text-gray-400 md:text-2xl font-light">
-					Finno-Beninese duo weaving West African roots into futuristic rap rituals.
-				</p>
-			</section>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>{duoName} & {duoSecondPart} | Modern Ritual</title>
+    <style>
+      html { scroll-behavior: smooth; }
+      .wall-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 4rem 0;
+      }
+      
+      @keyframes ticker {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+      }
+      .ticker-wrap {
+        display: flex;
+        overflow: hidden;
+        white-space: nowrap;
+      }
+      .ticker-content {
+        display: inline-flex;
+        animation: ticker 30s linear infinite;
+        gap: 4rem;
+      }
+    </style>
+  </head>
 
-			<section class="grid gap-12 md:grid-cols-2 mt-20">
-				
-				<div class="space-y-4">
-					<h2 class="text-sm font-bold tracking-widest text-purple-500 uppercase">Live Ritual</h2>
-					<div class="aspect-video w-full overflow-hidden border border-white/10 bg-white/5">
-						<iframe 
-							width="100%" height="100%" 
-							src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
-							title="YouTube video player" frameborder="0" 
-							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-							allowfullscreen>
-						</iframe>
-					</div>
-				</div>
+  <body class="bg-brand-bg text-brand-text">
+    <main class="mx-auto max-w-[1400px] px-6 overflow-x-hidden">
+      
+      <div class="flex justify-center pt-12 pb-4">
+        <img 
+          src="/images/LOGO, BACK.png" 
+          alt="Alodeou Ifáh Logo" 
+          class="w-16 h-16 md:w-20 md:h-20 object-contain" 
+        />
+      </div>
 
-				<div class="space-y-4">
-					<h2 class="text-sm font-bold tracking-widest text-purple-500 uppercase">The Sound</h2>
-					<div class="h-full border border-white/10 bg-white/5 p-2">
-						<iframe 
-							style="border-radius:12px" 
-							src="https://open.spotify.com/embed/artist/3TVXtAsR1InumI4p6PLS92?utm_source=generator&theme=0" 
-							width="100%" height="352" frameBorder="0" 
-							allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
-							loading="lazy">
-						</iframe>
-					</div>
-				</div>
+      <nav class="flex justify-between py-10 text-xs font-bold tracking-[0.2em] uppercase">
+        <span>{duoName} & {duoSecondPart}</span>
+        <div class="space-x-8">
+          <a href="#music" class="hover:opacity-40 transition-opacity">Music</a>
+          <a href="#rituals" class="hover:opacity-40 transition-opacity">Live</a>
+          <a href="mailto:contact@ifadeou.fi" class="hover:opacity-40 transition-opacity">Booking</a>
+        </div>
+      </nav>
 
-			</section>
+      <section class="min-h-[70vh] flex flex-col justify-center py-20 md:py-32">
+        <h1 class="text-[13vw] font-medium leading-[0.85] tracking-tighter md:text-[11vw] uppercase">
+          {duoName} <br/> 
+          {duoSecondPart}
+        </h1>
+        
+        <div class="mt-16 flex flex-col md:flex-row md:items-end justify-between gap-12">
+          <p class="max-w-lg text-xl font-normal leading-relaxed text-zinc-500 md:text-2xl">
+            Born from brotherhood. <span class="text-brand-text">A tribal yet futuristic ritual where angelic harmonies and hypnotic melodies collide.</span>
+          </p>
+          
+          <div class="flex -space-x-6">
+            <div class="h-24 w-24 rounded-full border-[6px] border-brand-bg bg-brand-sage transition-transform hover:scale-110 duration-500"></div>
+            <div class="h-24 w-24 rounded-full border-[6px] border-brand-bg bg-brand-rose transition-transform hover:scale-110 duration-500"></div>
+            <div class="h-24 w-24 rounded-full border-[6px] border-brand-bg bg-brand-cream transition-transform hover:scale-110 duration-500"></div>
+          </div>
+        </div>
+      </section>
 
-			<footer class="mt-40 border-t border-white/10 pt-10 text-center text-gray-500">
-				<p class="text-sm uppercase tracking-widest">Bookings: contact@ifadeou.fi</p>
-			</footer>
+      <section class="py-24 border-t border-zinc-100">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <h2 class="text-xs font-black tracking-[0.3em] uppercase text-zinc-400">The Philosophy</h2>
+          <div class="space-y-8">
+            <p class="text-3xl md:text-5xl font-light leading-tight italic tracking-tight">
+              "We are the bridge between the red dust of Cotonou and the midnight sun of Helsinki."
+            </p>
+            <p class="text-zinc-500 leading-relaxed max-w-lg text-lg">
+              Alodeou & Ifáh is more than a duo; it is a sonic investigation of lineage. By reclaiming ancestral polyphonies and stripping them through the filter of modern industrial rap, we create a space where the ritual is not a memory, but a future frequency.
+            </p>
+          </div>
+        </div>
+      </section>
 
-		</main>
-	</body>
+      <div class="py-12 border-y border-zinc-100 mb-24 ticker-wrap select-none">
+        <div class="ticker-content text-[8vw] font-black uppercase tracking-tighter opacity-10">
+          <span>Sahelian Frequencies // New Rituals Loading // Future Ancestors // </span>
+          <span>Sahelian Frequencies // New Rituals Loading // Future Ancestors // </span>
+        </div>
+      </div>
+
+      <section class="grid grid-cols-1 md:grid-cols-12 gap-6 pb-40" id="music">
+        <div class="md:col-span-8 group relative overflow-hidden rounded-[2.5rem] bg-brand-sage p-1">
+          <div class="aspect-video w-full overflow-hidden rounded-[2.3rem] bg-white">
+            <iframe 
+                class="w-full h-full"
+                src="https://www.youtube.com/embed/V3ZUmrRG7U0" 
+                title="Alodeou Ifáh - Futur ancien" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+        
+        <div class="md:col-span-4 relative overflow-hidden rounded-[2.5rem] bg-brand-rose h-[500px] md:h-auto">
+          <img src="/images/J&J-62.jpg" class="absolute inset-0 h-full w-full object-cover transition-opacity duration-1000 opacity-100 slideshow-img" alt="Slide 1"/>
+          <img src="/images/paint-6.jpg" class="absolute inset-0 h-full w-full object-cover transition-opacity duration-1000 opacity-0 slideshow-img" alt="Slide 2"/>
+          <div class="absolute inset-0 bg-black/10"></div>
+          <div class="absolute bottom-8 left-8 text-white uppercase text-[10px] font-black tracking-widest">
+            Hobo Hotel Album Release Event
+          </div>
+        </div>
+
+        <div class="md:col-span-12 rounded-[2.5rem] bg-brand-cream p-8 md:p-12">
+            <div class="mb-8 flex flex-col md:flex-row justify-between items-baseline gap-2">
+                <h3 class="text-[10px] font-black uppercase tracking-[0.3em] text-brand-text">Our Debut Album</h3>
+                <span class="text-[10px] font-medium uppercase tracking-[0.1em] text-black/40">Released 15.11.2025</span>
+            </div>
+            <iframe style="border-radius:24px" src="https://open.spotify.com/embed/album/60pYc5SMAtTWgv385Jw0dq?utm_source=generator&theme=0" width="100%" height="500" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </div>
+      </section>
+
+      <section id="rituals" class="py-24 border-t border-zinc-100">
+        <h2 class="text-xs font-bold tracking-[0.3em] uppercase mb-12">Manifested Rituals</h2>
+        <div class="space-y-1">
+          {venues.map((venue) => (
+            <div class="group flex justify-between items-center py-8 border-b border-zinc-100 hover:px-4 transition-all duration-500 cursor-default">
+              <span class="text-4xl md:text-6xl font-medium tracking-tighter uppercase group-hover:italic transition-all">{venue.name}</span>
+              <span class="text-xs font-bold tracking-widest uppercase text-zinc-400 opacity-0 group-hover:opacity-100 transition-opacity">{venue.vibe}</span>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section id="gallery" class="wall-container py-24">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center">
+            <div class="relative aspect-[3/4] w-full reveal-img shadow-xl rounded-3xl overflow-hidden" style="transform: rotate(-2deg);">
+                <img src="/images/paint-5.jpg" alt="Live Ritual Left" class="absolute inset-0 h-full w-full object-cover" />
+            </div>
+            <div class="relative aspect-[3/4] w-full md:mt-24 reveal-img shadow-xl rounded-3xl overflow-hidden" style="transform: rotate(3deg);">
+                <img src="/images/3.jpg" alt="Live Ritual Right" class="absolute inset-0 h-full w-full object-cover" />
+            </div>
+        </div>
+      </section>
+
+    
+
+      <footer class="py-16 border-t border-zinc-100 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] uppercase tracking-[0.3em] text-zinc-400">
+        <span>© 2026 {duoName} & {duoSecondPart}</span>
+        <div class="flex gap-8">
+          <a href="https://www.instagram.com/ifadeou/" class="hover:text-brand-text transition-colors">Instagram</a>
+          <a href="#" class="hover:text-brand-text transition-colors text-brand-text">Spotify</a>
+        </div>
+        <span>Helsinki — Cotonou</span>
+      </footer>
+
+    </main>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const revealObserver = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+            }
+          });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.reveal-img').forEach(img => revealObserver.observe(img));
+
+        const images = document.querySelectorAll('.slideshow-img');
+        let currentIndex = 0;
+
+        function cycleImages() {
+          if (images.length < 2) return;
+          images[currentIndex].classList.replace('opacity-100', 'opacity-0');
+          currentIndex = (currentIndex + 1) % images.length;
+          images[currentIndex].classList.replace('opacity-0', 'opacity-100');
+        }
+
+        setInterval(cycleImages, 4000);
+        window.scrollTo(0, 0);
+      });
+    </script>
+  </body>
 </html>
-
-<style>
-	.animate-glow {
-		box-shadow: 0 0 20px rgba(23, 101, 66, 0.5);
-		animation: pulse 2s infinite;
-	}
-	@keyframes pulse {
-		0%, 100% { opacity: 1; }
-		50% { opacity: 0.5; }
-	}
-</style>
