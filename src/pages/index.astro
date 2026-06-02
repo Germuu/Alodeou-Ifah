@@ -7,8 +7,8 @@ const venues = [
   { name: "Siltanen", vibe: "Filled the room" },
   { name: "Kallio Block Party", vibe: "Unmatched energy" },
   { name: "Hobo Hotel", vibe: "Album Release Event" },
-  { name: "Kuudes Linja", vibe: "The ritual continued" },
-  { name: "The Spot Helsinki", vibe: "New ambience" },
+  { name: "Kuudes Linja", vibe: "An unforgettable night" },
+  { name: "The Spot Helsinki", vibe: "Fresh venue vibe" },
 ];
 ---
 
@@ -16,7 +16,7 @@ const venues = [
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <title>{duoName} & {duoSecondPart} | Modern Ritual</title>
+    <title>{duoName} & {duoSecondPart} | Contemporary Sound</title>
     <style>
       html { scroll-behavior: smooth; }
       .wall-container {
@@ -103,7 +103,7 @@ const venues = [
         <span>{duoName} & {duoSecondPart}</span>
         <div class="space-x-8">
           <a href="#music" class="hover:opacity-40">Music</a>
-          <a href="#rituals" class="hover:opacity-40">Live</a>
+          <a href="#rituals" class="hover:opacity-40">Shows</a>
           <button id="open-contact" class="hover:opacity-40 uppercase font-bold">Contact</button>
         </div>
       </nav>
@@ -115,8 +115,8 @@ const venues = [
         </h1>
         
         <div class="mt-16 flex flex-col md:flex-row md:items-end justify-between gap-12">
-          <p class="max-w-lg text-xl font-normal leading-relaxed text-zinc-500 md:text-2xl">
-            Born from brotherhood. <span class="text-brand-text">An ancestral yet futuristic ritual where angelic harmonies and hypnotic melodies collide.</span>
+            <p class="max-w-lg text-xl font-normal leading-relaxed text-zinc-500 md:text-2xl">
+            Born from brotherhood. <span class="text-brand-text">A forward-thinking fusion of harmonic vocals and hypnotic melodies.</span>
           </p>
           <div class="flex -space-x-6">
             <div class="h-24 w-24 rounded-full border-[6px] border-brand-bg bg-brand-sage transition-transform hover:scale-110 duration-500"></div>
@@ -126,11 +126,11 @@ const venues = [
         </div>
 
         <div class="mt-24 w-full max-w-4xl mx-auto overflow-hidden rounded-[2.5rem] bg-zinc-100 shadow-2xl">
-          <div class="aspect-video w-full">
+            <div class="aspect-video w-full">
             <iframe 
               class="w-full h-full"
               src="https://www.youtube.com/embed/J14uDwfbkAQ" 
-              title="Alodeou Ifáh Ritual" 
+              title="Alodeou Ifáh — Live Performance" 
               frameborder="0" 
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
               allowfullscreen>
@@ -148,36 +148,36 @@ const venues = [
                 </p>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
-                <div class="space-y-6">
-                  <p class="text-zinc-500 text-lg leading-relaxed">
-                      Alodeou & Ifáh is a sonic investigation and celebration of displacement. Born in the Boreal North and tempered in the concrete crossroads of Brussels, our sound is partly the result of the heritage our parents brought with them—cooked, seasoned, and transformed.
-                  </p>
-                  <p class="text-zinc-500 text-lg leading-relaxed">
-                      By reclaiming Fon and Finnish sounds and stripping them through industrial rap and organic instrumentation, we create a space where the ritual is no longer a memory.
-                  </p>
+              <div class="space-y-6">
+                <p class="text-zinc-500 text-lg leading-relaxed">
+                  Alodeou & Ifáh are a music duo blending diverse cultural influences. Formed in the Boreal North and refined in Brussels, our sound draws from family traditions and contemporary production techniques.
+                </p>
+                <p class="text-zinc-500 text-lg leading-relaxed">
+                  We combine Fon and Finnish musical elements with industrial-tinged hip-hop and organic instrumentation to create a distinctive contemporary sound.
+                </p>
+              </div>
+              <div class="border-l border-zinc-100 pl-8 space-y-8">
+                <div>
+                  <h4 class="text-[10px] font-black uppercase tracking-[0.3em] clay-text mb-4">Artistic Themes</h4>
+                  <ul class="text-xl font-light space-y-2 opacity-80">
+                    <li>Cultural Heritage</li>
+                    <li>Narrative Storytelling</li>
+                    <li>Emotional Resonance</li>
+                    <li>Forward-Looking Optimism</li>
+                  </ul>
                 </div>
-                <div class="border-l border-zinc-100 pl-8 space-y-8">
-                    <div>
-                        <h4 class="text-[10px] font-black uppercase tracking-[0.3em] clay-text mb-4">Themes of the Ritual</h4>
-                        <ul class="text-xl font-light space-y-2 opacity-80">
-                            <li>Mythology & Spirits</li>
-                            <li>Ancestral Wisdom</li>
-                            <li>Historical Trauma</li>
-                            <li>Radical Optimism</li>
-                        </ul>
-                    </div>
-                    <p class="text-sm text-zinc-600 italic leading-relaxed">
-                        "We don't just perform; we use the density of the past to color the emptiness of the machine."
-                    </p>
-                </div>
+                <p class="text-sm text-zinc-600 italic leading-relaxed">
+                  "We don't just perform; we bring depth and texture to modern production."
+                </p>
+              </div>
             </div>
         </div>
       </section>
 
       <div class="py-12 border-y border-zinc-100 mb-24 ticker-wrap select-none">
         <div class="ticker-content text-[8vw] font-black uppercase tracking-tighter opacity-10">
-          <span>Sahelian Frequencies // New Performances Loading // Future Ancestors // </span>
-          <span>Sahelian Frequencies // New Performances Loading // Future Ancestors // </span>
+          <span>New Performances • Upcoming Releases • International Tours • </span>
+          <span>New Performances • Upcoming Releases • International Tours • </span>
         </div>
       </div>
 
@@ -203,7 +203,7 @@ const venues = [
       </section>
 
       <section id="rituals" class="py-24 border-t border-zinc-100">
-        <h2 class="text-xs font-bold tracking-[0.3em] uppercase mb-12"> shows we've done</h2>
+        <h2 class="text-xs font-bold tracking-[0.3em] uppercase mb-12">Selected Performances</h2>
         <div class="space-y-1">
           {venues.map((venue) => (
             <div class="group flex justify-between items-center py-8 border-b border-zinc-100 hover:px-4 transition-all duration-500 cursor-default">
@@ -217,10 +217,10 @@ const venues = [
       <section id="gallery" class="wall-container py-24">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center">
             <div class="relative aspect-[3/4] w-full reveal-img shadow-xl rounded-3xl overflow-hidden" style="transform: rotate(-2deg);">
-                <img src="/images/paint-5.jpg" alt="Live Ritual Left" class="absolute inset-0 h-full w-full object-cover" />
+              <img src="/images/paint-5.jpg" alt="Live Performance Left" class="absolute inset-0 h-full w-full object-cover" />
             </div>
             <div class="relative aspect-[3/4] w-full md:mt-24 reveal-img shadow-xl rounded-3xl overflow-hidden" style="transform: rotate(3deg);">
-                <img src="/images/3.jpg" alt="Live Ritual Right" class="absolute inset-0 h-full w-full object-cover" />
+              <img src="/images/3.jpg" alt="Live Performance Right" class="absolute inset-0 h-full w-full object-cover" />
             </div>
         </div>
       </section>
